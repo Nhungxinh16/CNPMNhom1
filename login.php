@@ -79,12 +79,6 @@
 
               </div>
 
-              <div class="d-flex mb-5 align-items-center">
-                  <span class="caption">Ghi Nhớ Đăng Nhập</span>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Quên Mật Khẩu?</a></span>
-              </div>
               <div class='d-flex flex-row'>
                 <button type="submit" name="login" value="Đăng Nhập" class="btn btn-block btn-primary">Đăng Nhập</button>
                 <div class="btn btn-block btn-primary mt-0 ms-2 d-flex justify-content-center align-items-center" style='background-color: #1da1f2; border-color: #1da1f2;'>

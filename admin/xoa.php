@@ -3,38 +3,25 @@
     require_once("check-admin.php");
     if(isset($_GET["tours"]) && $_GET["tour_id"] != null){
         $id = $_GET["tour_id"];
-        $sql = "select * from orders where tour_id = ?";
-        $orders = simpleQuery($sql, 1, [$id]);
-        if(count($orders) > 0){
-            $_SESSION["alert"] = "Không thể xóa tour này vì đã có người đặt";
+        $sql = "update tours set status = -1 where tour_id = " . $id;
+        $result = simpleQuery($sql, 0, []);
+        if($result){
+            $_SESSION["alert"] = "Xóa thành công!";
         }else{
-            $sql = "delete from tours where tour_id = ?";
-            $result = simpleQuery($sql, 0, [$id]);
-            if($result){
-                $_SESSION["alert"] = "Xóa tour thành công!";
-            }else{
-                $_SESSION["alert"] = "Không thể xóa tour!";
-            }
+            $_SESSION["alert"] = "Không thể xóa 1 !";
         }
         header("location: index.php");
     }
     else if(isset($_GET["customers"]) && $_GET["id"] != null){
         $id = $_GET["id"];
-        $sql = "select * from orders where customer_id = ?";
-        $orders = simpleQuery($sql, 1, [$id]);
-        if(count($orders) > 0){
-            $sql = "update customers set status = -1 where customer_id = " . $id;
-            $_SESSION["alert"] = "Không thể xóa khách này vì đây là khách vip";
+        $sql = "update customers set status = -1 where customer_id = " . $id;
+        $result = simpleQuery($sql, 0, []);
+        if($result){
+            $_SESSION["alert"] = "Xóa thành công!";
         }else{
-            $sql = "delete from customers where customer_id = ?";
-            $result = simpleQuery($sql, 0, [$id]);
-            if($result){
-                $_SESSION["alert"] = "Xóa thành công!";
-            }else{
-                $_SESSION["alert"] = "Không thể xóa !";
-            }
+            $_SESSION["alert"] = "Không thể xóa 1 !";
         }
-        header("location: QLND.php");
+        header("location: QLNhanVien.php");
     }
     else{
         header("location: index.php");

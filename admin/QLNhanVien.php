@@ -32,15 +32,13 @@
                                     <th scope="col">Email</th>
                                     <th scope="col">Điện thoại</th>
                                     <th scope="col">Giới tính</th>
-                                    <th scope="col">Xem chi tiết</th>
-                                    <th scope="col">Sửa</th>
                                     <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
                                     $i = 1;
-                                    $sql = "select * from customers where is_admin = 1 and user_name like '%".$key."%'";
+                                    $sql = "select * from customers where is_admin = 1 and status != -1 and user_name like '%".$key."%'";
                                     $rows = simpleQuery($sql);
                                     foreach($rows as $row){
                                         echo '
@@ -56,15 +54,12 @@
                                                         echo "Nam";
                                                     }
                                                 echo '</td>
-                                                <td><a href="XemND.php?id='.$row["customer_id"].'"><i class="fas fa-eye"></i></a></td>
-                                                <td><a href="sua-ND.php?id='.$row["customer_id"].'"><i class="fas fa-edit"></i></a></td>
                                                 <td><a onclick="return confirmFuncc()" href="xoa.php?customers=&id='.$row["customer_id"].'"><i class="fas fa-trash"></i></a></td>
                                             </tr>
                                         ';
                                         $i++;
                                     }
                                 ?>
-                                
                             </tbody>
                         </table>
                     </div>

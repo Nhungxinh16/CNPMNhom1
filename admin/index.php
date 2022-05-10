@@ -40,7 +40,7 @@ nó đang ở chỗ quản lý tour
                             </thead>
                             <tbody>
                                 <?php
-                                    $sql = "select * from tours, cities, tourtypes, ranks where tours.city_id = cities.city_id and tours.tour_rank_id = ranks.rank_id and tours.tour_type_id and tourtypes.tour_type_id group by tours.tour_id order by tours.tour_id desc";
+                                    $sql = "select * from tours, cities, tourtypes, ranks where status != -1 and tours.city_id = cities.city_id and tours.tour_rank_id = ranks.rank_id and tours.tour_type_id and tourtypes.tour_type_id group by tours.tour_id order by tours.tour_id desc";
                                     $tours = simpleQuery($sql);
                                     $i = 1;
                                     foreach($tours as $t){

@@ -29,8 +29,8 @@
         if($tour_guide_id == ""){
             $tour_guide_id = null;
         }
-        $sql = "update tours set tour_nsimpleQuery($sql, 0, [$touame = ?, description = ?, places = ?, day_count = ?, res_id = ?, hotel_id = ?, price_per_person = ?, image_1 =?, image_2 =?, image_3 =?, image_4 = ?, city_id =?, tour_guide_id = ?, tour_type_id = ?, tour_rank_id = ?, travel_schedule = ?, max = ? where tour_id = ?";
-        $result = r_name, $description, $places, $day_count, $res_id, $hotel_id, $price_per_person, $image_1, $image_2, $image_3, $image_4, $city_id, $tour_guide_id, $tour_type_id, $tour_rank_id, $travel_schedule, $max, $_GET["tour_id"]]);
+        $sql = "update tours set tour_name = ?, description = ?, places = ?, day_count = ?, res_id = ?, hotel_id = ?, price_per_person = ?, image_1 =?, image_2 =?, image_3 =?, image_4 = ?, city_id =?, tour_guide_id = ?, tour_type_id = ?, tour_rank_id = ?, travel_schedule = ?, max = ? where tour_id = ?";
+        $result = simpleQuery($sql, 0, [$tour_name, $description, $places, $day_count, $res_id, $hotel_id, $price_per_person, $image_1, $image_2, $image_3, $image_4, $city_id, $tour_guide_id, $tour_type_id, $tour_rank_id, $travel_schedule, $max, $_GET["tour_id"]]);
         if($result){
           $successAlert="Sửa thành công!";
           echo "<script type='text/javascript'>alert('$successAlert'); window.location.href='index.php';</script>";
