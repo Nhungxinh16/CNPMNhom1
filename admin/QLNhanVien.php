@@ -66,7 +66,6 @@
                 </div>
           <div>
             <form action="export-import.php" method="POST" enctype="multipart/form-data">
-                <button class="btn btn-dark" type="submit" name="export">Xuất file</button>
                 <button class="btn btn-primary" type="button"><a href="them_NV.php" style="color:white;">Thêm</a></button>
             </form>
         </div>
