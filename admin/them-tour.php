@@ -68,7 +68,7 @@
 
                     <div class="input-group mb-2"> 
                         <span class="input-group-text col-3" >Giá tour</span>
-                        <input type="number"  min = "100000" max = "100000000" class="form-control" name="price_per_person" placeholder="Nhập giá tour" required>      
+                        <input type="number"  min = "100000" max = "100000000" step="1000" class="form-control" name="price_per_person" placeholder="Nhập giá tour" required>      
                     </div>
 
                     <div class="input-group mb-2"> 
