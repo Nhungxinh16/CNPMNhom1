@@ -37,7 +37,7 @@ require("config/constants.php");
                             }
                             ?>
                             <br>
-                            <form action="" method="POST">
+                            <form id="register" action="" method="POST">
                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                     <label>
                                         Họ và tên
@@ -93,7 +93,7 @@ require("config/constants.php");
                                     </label>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <input type="password" name="password" class="form-control">
+                                    <input type="password" id="input-password" name="password" class="form-control">
                                 </div>
                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                     <label>

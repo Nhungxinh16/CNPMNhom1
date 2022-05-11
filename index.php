@@ -10,7 +10,7 @@ require('templates/header.php');
 <hr>
 
 <div class="mr-auto ml-auto" style="max-width: 1300px">
-  
+
   <!-- content -->
   <!--Slick Carousel Slider-->
   <br>

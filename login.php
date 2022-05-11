@@ -43,6 +43,11 @@
 
   include('templates/header-login.php');
 ?>
+<style>
+  .error{
+    color: red !important;
+  }
+</style>
 
 <body>
 
@@ -69,7 +74,7 @@
             }
 
             ?>
-            <form action="login.php" method="POST">
+            <form id="login" action="login.php" method="POST">
               <div class="form-group first">
                 <input type="text" class="form-control" name="username" id="username" placeholder="Tài khoản">
 

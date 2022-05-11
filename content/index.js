@@ -1,5 +1,65 @@
 $(document).ready(function () {
 
+  $('#login').validate({
+    rules: {
+      username: {
+          required: true,
+      },
+      password: {
+          required: true,
+          minlength: 8
+      },
+  },
+  messages: {
+      username: {
+          required: "Không thể để trống trường này",
+      },
+      password: {
+          required: "Không thể để trống trường này",
+          minlength: jQuery.validator.format("Mật khẩu gồm ít nhất {0} ký tự")
+      },
+  }
+});
+
+  $('#register').validate({
+      rules: {
+          email: {
+              required: true,
+              email: true,
+          },
+          user_name: {
+              required: true,
+          },
+          password: {
+              required: true,
+              minlength: 8
+          },
+          password2: {
+              required: true,
+              minlength: 8,
+              equalTo: "#input-password"
+          },
+      },
+      messages: {
+          email: {
+              required: "Không thể để trống trường này",
+              minlength: "Nhập địa chỉ Email có hiệu lực"
+          },
+          user_name: {
+              required: "Không thể để trống trường này",
+          },
+          password: {
+              required: "Không thể để trống trường này",
+              minlength: jQuery.validator.format("Mật khẩu gồm ít nhất {0} ký tự")
+          },
+          password2: {
+              required: "Không thể để trống trường này",
+              minlength: jQuery.validator.format("Mật khẩu gồm ít nhất {0} ký tự"),
+              equalTo: "Mật khẩu chưa khớp"
+          },
+      }
+  })
+
   $('.items').slick({
       infinite: true,
       slidesToShow: 3,
