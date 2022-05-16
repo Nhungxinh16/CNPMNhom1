@@ -84,7 +84,6 @@ nó dùng để quản lý đặt tour -->
                                     <th scope="col">Thời gian bắt đầu</th>
                                     <th scope="col">Số người</th>
                                     <th scope="col">Số ngày</th>
-                                    <th scope="col">Xem chi tiết</th>
                                     <th scope="col">Xác nhận</th>
                                     <th scope="col">Hủy bỏ</th>
                                 </tr>
@@ -103,7 +102,6 @@ nó dùng để quản lý đặt tour -->
                                                 <td>'.$row["start_time"].'</td>
                                                 <td>'.$row["people"].'</td>
                                                 <td>'.$row["day_count"].'</td>
-                                                <td><a href="Xemdon.php?id='.$row["order_id"].'"><i class="fas fa-eye"></i></a></td>
                                                 <td><a href="QLDDTour.php?val=&order_id='.$row["order_id"].'" id="check_tick"><i class="fas fa-check-circle"></i></a></td>
                                                 <td><a href="QLDDTour.php?cancel=&order_id='.$row["order_id"].'"><i class="fas fa-trash-alt"></i></a></td>
                                             </tr>
@@ -130,7 +128,6 @@ nó dùng để quản lý đặt tour -->
                                     <th scope="col">Số người</th>
                                     <th scope="col">Số ngày</th>
                                     <th scope="col">Tình trạng</th>
-                                    <th scope="col">Xem chi tiết</th>
                                     <th scope="col">Hủy bỏ</th>
                                 </tr>
                             </thead>
@@ -149,7 +146,6 @@ nó dùng để quản lý đặt tour -->
                                                 <td>'.$row["people"].'</td>
                                                 <td>'.$row["day_count"].'</td>
                                                 <td>Chờ thanh toán</td>
-                                                <td><a href="Xemdon.php?id='.$row["order_id"].'"><i class="fas fa-eye"></i></a></td>
                                                 <td><a href="QLDDTour.php?cancel=&order_id='.$row["order_id"].'"><i class="fas fa-trash-alt"></i></a></td>
                                             </tr>
                                         ';
@@ -175,7 +171,6 @@ nó dùng để quản lý đặt tour -->
                                     <th scope="col">Số người</th>
                                     <th scope="col">Số ngày</th>
                                     <th scope="col">Tình trạng</th>
-                                    <th scope="col">Xem chi tiết</th>
                                 </tr>
                             </thead>
                             <tbody>
