@@ -25,7 +25,7 @@ if (isset($_GET['tour_type'])) {
 //check co hay khong
   $sreachResult = mysqli_query($conn, $sql);
   if(mysqli_num_rows($sreachResult) == 0){
-    echo "<script type='text/javascript'>alert('Không tìm thấy kết quả');</script>"; 
+    header('location: index.php?f=1');
   }
 ?>
 <main>

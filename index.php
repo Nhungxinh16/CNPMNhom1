@@ -1,6 +1,9 @@
 <?php
 require("config/constants.php");
 require('templates/header.php');
+if(isset($_GET['f'])){
+  echo "<script type='text/javascript'>alert('Không tìm thấy kết quả');</script>"; 
+}
 ?>
 
 <!-- Ảnh bìa -->
