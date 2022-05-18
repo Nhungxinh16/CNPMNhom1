@@ -167,13 +167,6 @@ select:focus {
             <div class="col-md-6 pt-md-0 pt-3"> <label for="phone">Số điện thoại</label> <input disabled type="tel" class="bg-light form-control" placeholder="+84 338-873-927"  value="<?php echo $phone; ?>"> </div>
         </div>
         </div>
-        <div class="py-3 pb-4 border-bottom"> <button class="btn btn-primary mr-3" data-toggle="modal" data-target="#exampleModalCenter">Sửa đổi</button>  </div>
-        <div class="d-sm-flex align-items-center pt-3" id="deactivate">
-            <div> <b>Thay đổi mật khẩu</b>
-                <p>Đặt lại mật khẩu định kì có thể giúp tăng tính báo mật</p>
-            </div>
-            <div class="ms-auto"> <button class="btn danger">Thay đổi mật khẩu</button> </div>
-        </div>
     </div>
 </div>
 
@@ -197,14 +190,6 @@ select:focus {
                 <div class="row py-2">
                     <div class="col-md-6"> <label for="email">Địa chỉ Email</label> <input type="text"  name='email' class="bg-light form-control" placeholder="vinhveoveo21@gmail.com"  value="<?php echo $email; ?>"> </div>
                     <div class="col-md-6 pt-md-0 pt-3"> <label for="phone">Số điện thoại</label> <input type="tel" name='phone_number' class="bg-light form-control" placeholder="+84 338-873-927"  value="<?php echo $phone; ?>"> </div>
-                </div>
-                </div>
-                <div class="py-3 pb-4 border-bottom"> <button class="btn btn-primary mr-3" type='submit' name='submit'>Sửa đổi</button> <button data-dismiss="modal" class="btn border button">Đóng</button> </div>
-                <div class="d-sm-flex align-items-center pt-3" id="deactivate">
-                    <div> <b>Thay đổi mật khẩu</b>
-                        <p>Đặt lại mật khẩu định kì có thể giúp tăng tính báo mật</p>
-                    </div>
-                    <div class="ms-auto"> <button class="btn danger">Thay đổi mật khẩu</button> </div>
                 </div>
             </div>
         </form>
